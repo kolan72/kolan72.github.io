@@ -262,6 +262,10 @@ Full-Width Styles
   width: 100%;
 }
 
+.innertop {
+  color: #fff;
+}
+
 .inner {
   position: relative;
   max-width: 640px;
