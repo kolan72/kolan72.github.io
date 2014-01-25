@@ -358,6 +358,7 @@ Full-Width Styles
 
 #main_content_wrap {
   background: #f2f2f2;
+  height:80%;
 }
 
 #main_content {
@@ -368,7 +369,6 @@ Full-Width Styles
 #footer_wrap {
   position:absolute;
   bottom:0;
-  height:10%;
   background: #0090ff;
   background: -moz-linear-gradient(bottom, #373737, #0090ff);
   background: -webkit-linear-gradient(bottom, #373737, #0090ff);
