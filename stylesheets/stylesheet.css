@@ -375,7 +375,7 @@ Full-Width Styles
 
  /* +AK */ 
 footer
-{ height: 155px; /* '.push' must be the same height as 'footer' */ }
+{ height: 100px; /* '.push' must be the same height as 'footer' */ }
 
 #footer_wrap {
   background: #0090ff;
