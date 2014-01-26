@@ -34,6 +34,8 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
+/* +AK */
+html, body { height: 100%; }
 
 ol, ul {
   list-style: none;
