@@ -367,9 +367,6 @@ Full-Width Styles
 	margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
 }
 
-footer, .push {
-	height: 100px; /* '.push' must be the same height as 'footer' */
-}
 
 #main_content {
   padding-top: 40px;
@@ -378,6 +375,7 @@ footer, .push {
 
 #footer_wrap {
   background: #0090ff;
+  height: 100px; 
   background: -moz-linear-gradient(bottom, #373737, #0090ff);
   background: -webkit-linear-gradient(bottom, #373737, #0090ff);
   background: -ms-linear-gradient(bottom, #373737, #0090ff);
