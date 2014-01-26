@@ -379,7 +379,7 @@ footer
 
 #footer_wrap {
   background: #0090ff;
-  height: 100px; 
+  
   background: -moz-linear-gradient(bottom, #373737, #0090ff);
   background: -webkit-linear-gradient(bottom, #373737, #0090ff);
   background: -ms-linear-gradient(bottom, #373737, #0090ff);
