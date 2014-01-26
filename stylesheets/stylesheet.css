@@ -373,6 +373,10 @@ Full-Width Styles
   padding-bottom: 40px;
 }
 
+ /* +AK */ 
+footer
+{ height: 155px; /* '.push' must be the same height as 'footer' */ }
+
 #footer_wrap {
   background: #0090ff;
   height: 100px; 
