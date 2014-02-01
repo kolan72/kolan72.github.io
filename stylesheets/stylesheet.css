@@ -360,6 +360,7 @@ Full-Width Styles
 
 #main_content_wrap {
   background: #f2f2f2;
+  width: 626px;
   /*min-height: 640px;*/
   min-height: 100%;
 	height: auto !important;
