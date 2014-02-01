@@ -359,6 +359,7 @@ Full-Width Styles
 }
 
 #leftColumn {
+    background: #f2f2f2;
     width: 252px;
     float: left;
 }
