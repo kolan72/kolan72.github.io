@@ -358,6 +358,17 @@ Full-Width Styles
   background: url(../images/sprite_download.png) no-repeat top right;
 }
 
+.links
+{
+	line-height: 144%;
+}
+
+.links span
+{
+	color: #e53a5e;
+	background-color: inherit;	
+}
+
 #leftColumn {
     background: #f2f2f2;
     width: 252px;
