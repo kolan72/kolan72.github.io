@@ -364,7 +364,7 @@ Full-Width Styles
     float: left;
     margin-left: 40px;
     border: 1px solid rgb(0, 106, 187);
-    padding: 10px;
+    padding-left: 10px;
 }
 
 #main_content_wrap {
