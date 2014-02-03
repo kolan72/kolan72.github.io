@@ -414,6 +414,9 @@ footer
 #footer_wrap {
   background: #0090ff;
   /* +AK */ 
+  margin: 0px;
+  padding: 0px;
+  padding: 20px 10px;
   clear: both;
   background: -moz-linear-gradient(bottom, #373737, #0090ff);
   background: -webkit-linear-gradient(bottom, #373737, #0090ff);
