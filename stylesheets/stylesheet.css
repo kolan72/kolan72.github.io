@@ -388,7 +388,7 @@ Full-Width Styles
   min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
+	margin: 0 auto ; /* -100px the bottom margin is the negative value of the footer's height */
 }
 
 
@@ -403,6 +403,7 @@ footer
 
 #footer_wrap {
   background: #0090ff;
+  /* +AK */ 
   clear: both;
   background: -moz-linear-gradient(bottom, #373737, #0090ff);
   background: -webkit-linear-gradient(bottom, #373737, #0090ff);
