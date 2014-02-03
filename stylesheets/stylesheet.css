@@ -35,7 +35,10 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 /* +AK */
-html, body { height: 100%; }
+html, body { 
+	height: 100%; 
+	min-width: 990px;
+	}
 
 ol, ul {
   list-style: none;
@@ -292,7 +295,7 @@ Full-Width Styles
 
 
 #content {
-    width: 900px;
+    width: 990px;
     margin: 0px auto;
 }
 
