@@ -382,13 +382,13 @@ Full-Width Styles
 #main_content_wrap {
   background: #f2f2f2;
   width: 626px;
-  position: absolute;
+  
   /*+AK*/
   /*min-height: 640px;*/
   min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
+	margin: 262px auto -100px; /* the bottom margin is the negative value of the footer's height */
 }
 
 
