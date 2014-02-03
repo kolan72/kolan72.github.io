@@ -382,6 +382,7 @@ Full-Width Styles
 #main_content_wrap {
   background: #f2f2f2;
   width: 626px;
+  position: relative;
   /*+AK*/
   /*min-height: 640px;*/
   min-height: 100%;
