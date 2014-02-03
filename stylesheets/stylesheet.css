@@ -380,7 +380,7 @@ Full-Width Styles
 
 #leftColumn {
     background: #f2f2f2;
-    width: 202px;
+    width: 162px;
     
     float: left;
     border: 1px solid rgb(0, 106, 187);
@@ -406,9 +406,9 @@ Full-Width Styles
   padding-bottom: 40px;
 }
 
- /* +AK */ 
+ /* +AK 
 footer
-{ height: 100px; /* '.push' must be the same height as 'footer' */ }
+{ height: 100px; /* '.push' must be the same height as 'footer' }*/ 
 
 #footer_wrap {
   background: #0090ff;
