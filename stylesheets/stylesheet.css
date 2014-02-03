@@ -290,6 +290,12 @@ Full-Width Styles
   border-bottom-right-radius: 2px;
 }
 
+
+#content {
+    width: 900px;
+    margin: 0px auto;
+}
+
 #header_wrap {
   background: #0090ff;
   background: -moz-linear-gradient(top, #373737, #0090ff);
