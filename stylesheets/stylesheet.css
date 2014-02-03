@@ -55,7 +55,7 @@ Theme Styles
 *******************************************************************************/
 
 body {
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   color:#373737;
   background: #0090ff;
   font-size: 16px;
@@ -381,7 +381,7 @@ Full-Width Styles
 
 #leftColumn {
     background: #f2f2f2;
-    width: 162px;
+    width: 142px;
     
     float: left;
     border: 1px solid rgb(0, 106, 187);
