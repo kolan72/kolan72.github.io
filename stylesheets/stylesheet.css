@@ -402,6 +402,19 @@ Full-Width Styles
 }
 
 
+#main_content_screens_wrap {
+  background: #f2f2f2;
+  width: 826px;
+  
+  /*+AK*/
+  /*min-height: 640px;
+  min-height: 100%;
+	height: auto !important;
+	height: 100%;*/
+	margin: 0 auto ; /* -100px the bottom margin is the negative value of the footer's height */
+}
+
+
 #main_content {
   padding-top: 0px;
   padding-bottom: 40px;
