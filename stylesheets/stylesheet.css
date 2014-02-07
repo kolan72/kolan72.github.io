@@ -40,10 +40,8 @@ html, body {
 	/*height: 100%; */
 	min-width: 990px;
 	}
-
-ol, ul {
-  list-style: none;
-}
+/* -AK */
+/*ol, ul {list-style: none;} */
 
 table {
   border-collapse: collapse;
