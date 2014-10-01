@@ -366,6 +366,11 @@ Full-Width Styles
   background: url(../images/sprite_download.png) no-repeat top right;
 }
 
+.nopadding img
+{
+  padding: 0;    
+}
+
 .links
 {
 	line-height: 104%;
