@@ -231,7 +231,7 @@ dl p {
 
 hr {
   height: 1px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   border: none;
   background: url('../images/bg_hr.png') repeat-x center;
 }
@@ -265,6 +265,7 @@ Full-Width Styles
 
 .outer {
   width: 100%;
+ 
 }
 
 .innertop {
@@ -319,6 +320,24 @@ Full-Width Styles
   font-style:italic;
   font-weight: 700;
   text-shadow: #111 0px 0px 10px;
+  text-align : left;
+  float:left;
+}
+
+
+#project_title2 {
+  margin: 0;
+  margin-right:5px;
+  color: #fff;
+  font-size: 42px;
+  font-style:italic;
+  font-weight: 700;
+  text-shadow: #111 0px 0px 10px;
+  text-align : right;  
+    -ms-transform: skewX(25deg); /* IE 9 */
+    -webkit-transform: skewX(25deg); /* Safari */
+    transform: skewX(25deg); /* Standard syntax */
+  /*float:right; */
 }
 
 #project_tagline {
