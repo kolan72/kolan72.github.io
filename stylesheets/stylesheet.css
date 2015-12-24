@@ -369,12 +369,13 @@ Full-Width Styles
 
 .nopadding img
 {
-  padding: 0;    
+  padding: 0px;    
+  margin-top: 10px;
 }
 
 .links
 {
-	line-height: 104%;
+	line-height: 12px; /*104%*/
 }
 
 .links span
