@@ -9,13 +9,16 @@
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/tabs.css">
 
+    <script type="text/javascript" src="javascripts/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="javascripts/tabs_scrshort.js"></script>
+
     <title>TMFExplorer - программа для работы со слишком большим количеством файлов</title>
   </head>
 
   <body>
   <div id="content">
     <!-- HEADER -->
-  <div id="header_wrap" class="outer">
+     <div id="header_wrap" class="outer">
         <header>
           <!--<a id="forkme_banner" href="https://github.com/kolan72">View on GitHub</a>-->
 
@@ -24,7 +27,7 @@
           <h1 id="project_title2">WordsBrowser</h1>
           <hr style="clear:both;display:none;"/>
         </header>
-    </div>
+     </div>
      <div id="leftColumn" class="links">
       <a title="" href="http://www.tmfexplorer.com/">
         Главная
@@ -39,28 +42,39 @@
       </a>
     </div>
     <!-- MAIN CONTENT -->
-    <div id="main_content_screens_wrap" class="outer">
+    <div id="tab-container">  
+    <ul class="tab-menu">  
+        <li id="main_content_screens_wrap" class="active">TMFExplorer</li>  
+        <li id="wordsbrowser">WordsBrowser</li>  
+    </ul>  
+    <div class="clear"></div>  
+    <div class="tab-top-border"></div>
+    <div id="main_content_screens_wrap-tab" class="outer tab-content active">
       <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages">
-<span class="octicon octicon-link"></span></a>Скриншоты</h3>
-<p>  При открытии программы
-  <img src="images/2014-02-04_131408.JPG"></img>
-</p>
-<p>  При обновлении исходной директории
-  <img src="images/2014-02-04_174245_mod.JPG"></img>
-</p>
-<p>  При обработке исходной директории
-  <img src="images/2014-02-04_172010_mod.JPG"></img>
-</p>
-<p>  Создание Zip-архива по списку директорий
-  <img src="images/2014-02-04_173138_mod.JPG"></img>
-</p>
-<p>  С опцией создания Zip-архива целевой директории
-  <img src="images/2014-01-27_182307_mod.JPG"></img>
-</p>
+<!--       <h3>
+
+        Скриншоты</h3>-->
+        <p>При открытии программы TMFExplorer
+          <img src="images/2014-02-04_131408.JPG"></img>
+        </p>
+        <p>  При обновлении исходной директории
+          <img src="images/2014-02-04_174245_mod.JPG"></img>
+        </p>
+        <p>  При обработке исходной директории
+          <img src="images/2014-02-04_172010_mod.JPG"></img>
+        </p>
+        <p>  Создание Zip-архива по списку директорий
+          <img src="images/2014-02-04_173138_mod.JPG"></img>
+        </p>
+        <p>  С опцией создания Zip-архива целевой директории
+          <img src="images/2014-01-27_182307_mod.JPG"></img>
+        </p>
       </section>
-</div>
+    </div>
+    <div id="wordsbrowser-tab" class="tab-content">
+        <h3>Under Construction</h3>
+    </div>
+    </div>
     <!-- FOOTER -->
     <div id="footer_wrap" class="outer">
        <footer> <!--/class="inner" -->
