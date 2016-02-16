@@ -282,9 +282,9 @@ Full-Width Styles
 #forkme_banner {
   display:    block;
   position:  relative;
-  top: 0; /*-49px-21px;*/
+  top: -9; /*-49px-21px;*/
   float:right;
-  right: -5px;  /*10px AK*/
+  right: -88px;  /*10px AK*/
   /*bottom:  0px; -нельзя */
   z-index: 10;
   padding: 10px 50px 10px 10px;
