@@ -304,7 +304,9 @@ Full-Width Styles
 
     height: auto;
     max-height: 100%;*/
-   
+     position: absolute; top:10; left: 10;
+    height: auto;
+    max-width: 100%;
     min-width: 100%;
     width: 100%;
 }
