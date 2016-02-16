@@ -301,10 +301,9 @@ Full-Width Styles
   position:  relative;
   top: 6px;
   float:right;
-  right: 1px;  /*10px AK*/
+  right: -5px;  /*10px AK*/
   /*bottom:  0px; -нельзя */
   z-index: 10;
- padding: 10px 50px 10px 10px;
 }
 
 #myImage {
