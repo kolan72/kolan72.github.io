@@ -299,9 +299,9 @@ Full-Width Styles
 #HotLog {
   display:    block;
   position:  relative;
-  top: 6px;
+  top: 2px;
   float:right;
-  right: -175px;  /*10px AK*/
+  right: -150px;  /*10px AK*/
   /*bottom:  0px; -нельзя */
   z-index: 10;
 }
