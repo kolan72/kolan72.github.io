@@ -282,7 +282,7 @@ Full-Width Styles
 #forkme_banner {
   display:    block;
   position:  relative;
-  top: -21px;
+  top: -39px; /*-21px;*/
   float:right;
   right: 1px;  /*10px AK*/
   /*bottom:  0px; -нельзя */
@@ -294,6 +294,17 @@ Full-Width Styles
   box-shadow: 0 0 10px rgba(0,0,0,.5);
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
+}
+
+#HotLog {
+  display:    block;
+  position:  relative;
+  top: -9px;
+  float:right;
+  right: 1px;  /*10px AK*/
+  /*bottom:  0px; -нельзя */
+  z-index: 10;
+ 
 }
 
 #myImage {
