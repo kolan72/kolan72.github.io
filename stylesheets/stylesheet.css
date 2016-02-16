@@ -301,7 +301,7 @@ Full-Width Styles
   position:  relative;
   top: 2px;
   float:right;
-  right: -150px;  /*10px AK*/
+  right: -135px;  /*10px AK*/
   /*bottom:  0px; -нельзя */
   z-index: 10;
 }
