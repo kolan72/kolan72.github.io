@@ -282,7 +282,7 @@ Full-Width Styles
 #forkme_banner {
   display:    block;
   position:  relative;
-  top: -42px;  /*-49px-21px;*/
+  top: 0px;  /*-42-49px-21px;*/
   float:right;
   /*right: -88px;  10px AK*/
   /*bottom:  0px; -нельзя */
@@ -299,7 +299,7 @@ Full-Width Styles
 #HotLog {
   display:    block;
   position:  relative;
-  top: -49px;
+  top: 0px; /*-49px*/
   float:right;
   right: 0px;  /*10px AK*/
   /*bottom:  0px; -нельзя */
@@ -503,7 +503,10 @@ footer
   background: linear-gradient(bottom, #373737, #0090ff);
 }
 
-
+#p_toponly
+{
+     padding-top: 20px;
+}
 
 /*******************************************************************************
 Small Device Styles
