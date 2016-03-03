@@ -11,19 +11,22 @@
     <script type="text/javascript" src="javascripts/tabs.js"></script>
 
 
-<!--    <link data-require="bootstrap-css@3.0.3" data-semver="3.0.3" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />-->
-    <script data-require="angular.js@*" data-semver="1.2.16" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <!--<link data-require="bootstrap-css@3.0.3" data-semver="3.0.3" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />-->
+<!--    <script data-require="angular.js@*" data-semver="1.2.16" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>-->
+    <script src="javascripts/angular.min.js"></script>
+
     <script data-require="angular-ui-bootstrap@*" data-semver="0.10.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.js"></script>
-    <!--<script src="http://code.angularjs.org/1.2.0rc1/i18n/angular-locale_ru-ru.js"></script>-->
+
     <script src="javascripts/script.js"></script>
+
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
  
 
     <title>TMFExplorer - программа для работы со слишком большим количеством файлов</title>
   </head>
 
- <body  ng-app="routedTabs" ng-controller="mainController">
+ <body  ng-app="routedTabs" ng-controller="mainController" class="ng-cloak" >
   <div id="content">
     <!-- HEADER -->
    <div id="header_wrap" class="outer">
@@ -45,10 +48,10 @@
         </ul> 
     </div>
     <!-- MAIN CONTENT -->
-<div id="tab-container">  
+<div id="tab-container" ng-cloak>  
     <div class="clear"></div>  
 <!--    <div class="tab-top-border"></div>-->
-    <div ui-view></div>
+    <div ui-view ></div>
 </div>
 
     <!-- FOOTER  -->
@@ -84,6 +87,6 @@
       </footer>
       
    </div>
-
+  </div>
  </body>
 </html>

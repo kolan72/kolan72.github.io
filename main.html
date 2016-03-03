@@ -5,9 +5,11 @@
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Kolan72.github.io : " />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/tabs.css">
+    <style>
+    [ng\: cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x- ng-cloak {
+      display: none !important;
+    }
+    </style>
 
     <script type="text/javascript" src="javascripts/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="javascripts/tabs.js"></script>
@@ -20,21 +22,25 @@
     <script src="http://code.angularjs.org/1.2.0rc1/i18n/angular-locale_ru.js"></script>
     <script src="javascripts/script.js"></script>
 
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/tabs.css">
+
   </head>
 
   <body>
   <div class="clear"></div>  
 <!--    <div class="tab-top-border"></div>-->
-<div>
+<div ng-cloak>
    <!-- <div class="clear"></div>  -->
    <!-- <div class="tab-top-border"></div>-->
-    <tabset>
+    <tabset >
         <tab 
             ng-repeat="t in tabs " 
             heading="{{t.heading}}"
             select="go(t.route)"
             active="t.active"
             ng-hide="{{!t.visible}}"
+           
             >
         </tab>
     </tabset>
