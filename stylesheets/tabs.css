@@ -95,8 +95,9 @@ q:before, q:after {
     border-bottom: 0;
 }
 .tab-top-border {
-    border-bottom: 1px solid #d0ccc9;
+    border-bottom: 1px solid #d0ccc9 ;/*#d0ccc9*/
 }
+
 .tab-content{
     margin : 0 auto;
     background: #efefef;
@@ -104,7 +105,9 @@ q:before, q:after {
     border: 1px solid #ddc;
     border-top-style: none;
     text-align: left;
-    padding: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 20px;
     padding-bottom: 20px;
     font-size: 16px;
     font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
