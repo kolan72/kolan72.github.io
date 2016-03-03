@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Kolan72.github.io : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/tabs.css">
+
+    <script type="text/javascript" src="javascripts/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="javascripts/tabs.js"></script>
+    
+    <link data-require="bootstrap-css@3.0.3" data-semver="3.0.3" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+    <script data-require="angular.js@*" data-semver="1.2.16" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script data-require="angular-ui-bootstrap@*" data-semver="0.10.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.js"></script>
+    <script src="http://code.angularjs.org/1.2.0rc1/i18n/angular-locale_ru-ru.js"></script>
+    <script src="http://code.angularjs.org/1.2.0rc1/i18n/angular-locale_ru.js"></script>
+    <script src="javascripts/script.js"></script>
+
+  </head>
+
+  <body>
+  <div class="clear"></div>  
+<!--    <div class="tab-top-border"></div>-->
+<div>
+   <!-- <div class="clear"></div>  -->
+   <!-- <div class="tab-top-border"></div>-->
+    <tabset>
+        <tab 
+            ng-repeat="t in tabs " 
+            heading="{{t.heading}}"
+            select="go(t.route)"
+            active="t.active"
+            ng-hide="{{!t.visible}}"
+            >
+        </tab>
+    </tabset>
+<!--      <div class="tab-top-border"></div>-->
+    <div ui-view ></div>
+
+</div>
+ </body>
+</html>
