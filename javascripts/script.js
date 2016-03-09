@@ -130,12 +130,8 @@
                                                             function () {
                                                                 angular.element('#content').css('display', 'block');
                                                             }, 100);
-                                        $scope.isParentStateChanged = false;
                                     }
-                                    else
-                                    {
-                                        $scope.isParentStateChanged = true;
-                                    }
+                                    $scope.isParentStateChanged = true;
                                 }
                                 else
                                 {
