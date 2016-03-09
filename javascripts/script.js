@@ -2,9 +2,6 @@
 
 	var app = angular.module("routedTabs", ["ui.router", "ui.bootstrap"]);
 
-	app.run(function ($templateCache, $http) {
-	    $http.get('tab1.html', { cache: true });
-	});
 
 	app.config(function ($stateProvider, $urlRouterProvider, $provide) {
 
@@ -107,7 +104,7 @@
 
 	    $rootScope.$on('$viewContentLoaded',
         function (event) {
-            console.log(event);
+            //console.log(event);
             // Access to all the view config properties.
             // and one special property 'targetView'
             // viewConfig.targetView 
@@ -127,11 +124,23 @@
                             }
                             else {
                                 if (!(getStateNameFactory.getStateName(fromState.name) == getStateNameFactory.getStateName(toState.name))) {
-                                    $scope.isParentStateChanged = true;
+                                    if (fromState.name == '') {
+                                        angular.element('#content').css('display', 'none');
+                                        $timeout(
+                                                            function () {
+                                                                angular.element('#content').css('display', 'block');
+                                                            }, 100);
+                                        $scope.isParentStateChanged = false;
+                                    }
+                                    else
+                                    {
+                                        $scope.isParentStateChanged = true;
+                                    }
                                 }
                                 else
                                 {
-                                    $scope.isParentStateChanged = false;
+
+                                    $scope.isParentStateChanged = false;                                    
                                 }
                                 //          Не рано ли здесь делать невидимым класс #content?
                                 //////if (!(getStateNameFactory.getStateName(fromState.name) == getStateNameFactory.getStateName(toState.name)))
