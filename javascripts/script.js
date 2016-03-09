@@ -126,11 +126,12 @@
                                 if (!(getStateNameFactory.getStateName(fromState.name) == getStateNameFactory.getStateName(toState.name))) {
                                     if (fromState.name == '') {
                                         angular.element('#content').css('display', 'none');
-                                        $timeout(
-                                                            function () {
-                                                                angular.element('#content').css('display', 'block');
-                                                            }, 100);
+                                        //////$timeout(
+                                        //////                    function () {
+                                        //////                        angular.element('#content').css('display', 'block');
+                                        //////                    }, 100);
                                     }
+
                                     $scope.isParentStateChanged = true;
                                 }
                                 else
