@@ -1,4 +1,4 @@
-(function(){
+﻿(function(){
 
 	var app = angular.module("routedTabs", ["ui.router", "ui.bootstrap"]);
 
@@ -56,12 +56,14 @@
 
 	app.controller("mainController", ['$rootScope', '$scope', '$state', '$timeout', 'getStateNameFactory', function ($rootScope, $scope, $state, $timeout, getStateNameFactory) {
 
+	    $scope.isParentStateChanged = true;
+
 	    $scope.go = function (route) {
 	        $state.go(route);
-	        $timeout(
-                function () {
-                    angular.element('#content').css('display', 'block');
-                }, 10);
+	        //////$timeout(
+            //////    function () {
+            //////        angular.element('#content').css('display', 'block');
+            //////    }, 10);
 
 	    };
 
@@ -87,10 +89,29 @@
 	            tab.visible = !(tab.route.indexOf(stateRootName) == -1);
 
 	        });
+
+	        if ($scope.isParentStateChanged)
+	        {
+	            angular.element('#content').css('display', 'none');
+	            $timeout(
+                                    function () {
+                                        angular.element('#content').css('display', 'block');
+                                    }, 10);
+	        }
+
 	    });
 	    $rootScope.$on('$stateNotFound', function (event, unfoundState, fromState, fromParams) {
 	        console.log(unfoundState.to);
 	    }
+        );
+
+	    $rootScope.$on('$viewContentLoaded',
+        function (event) {
+            console.log(event);
+            // Access to all the view config properties.
+            // and one special property 'targetView'
+            // viewConfig.targetView 
+        }
         );
 
 	    $rootScope.$on('$stateChangeError',
@@ -105,10 +126,18 @@
                                 event.preventDefault();
                             }
                             else {
-                                if (!(getStateNameFactory.getStateName(fromState.name) == getStateNameFactory.getStateName(toState.name)))
-                                {
-                                    angular.element('#content').css('display', 'none');
+                                if (!(getStateNameFactory.getStateName(fromState.name) == getStateNameFactory.getStateName(toState.name))) {
+                                    $scope.isParentStateChanged = true;
                                 }
+                                else
+                                {
+                                    $scope.isParentStateChanged = false;
+                                }
+                                //          Не рано ли здесь делать невидимым класс #content?
+                                //////if (!(getStateNameFactory.getStateName(fromState.name) == getStateNameFactory.getStateName(toState.name)))
+                                //////{
+                                //////    angular.element('#content').css('display', 'none');
+                                //////}
                             }
                         })
 	}]);
