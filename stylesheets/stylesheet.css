@@ -36,9 +36,10 @@ footer, header, hgroup, menu, nav, section {
 }
 /* +AK */
 html, body { 
-	/*-AK */
+	/*-AK */    
 	/*height: 100%; */
 	min-width: 990px;
+    min-height:101%;
 	}
 /* -AK */
 /*ol, ul {list-style: none;} */
@@ -154,7 +155,7 @@ img {
 }
 
 p img {
-  display: inline;
+  display: block;
   margin: 0;
   padding: 5px 10px 0 0;
   vertical-align: middle;
@@ -468,6 +469,9 @@ Full-Width Styles
 #main_content_screens_wrap-tab
 {
       background: #f2f2f2;
+      padding: 10px;
+	  margin: 0 auto ; /* -100px the bottom margin is the negative value of the footer's height */
+
 }
 /*+AK аналогично с #main_content_wrap-tab  по цвету*/
 #wordsbrowser-tab
@@ -577,6 +581,9 @@ footer
     color: white;
 }
 
+/*[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}*/
 /**::before, *::after {
    display: none !important;
 }*/
@@ -642,6 +649,9 @@ footer
     border-color: #007EDF;
 }
 
+.nav > li > a {
+  display: block;
+}
 
 .nav-tabs li a {
 	color: #317EAC;
@@ -649,6 +659,7 @@ footer
         font-size:19px;
 
       border: 1px solid #d0ccc9;
+         /*display: block;*/
 }
 
 .nav-tabs li.active a
@@ -657,6 +668,7 @@ footer
 	color: #317EAC;
     font-size:20px;
 	font-weight: bold;
+        display: block;
 }
 
 .nav-tabs  li.active a:hover

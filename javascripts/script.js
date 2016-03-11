@@ -38,20 +38,30 @@
 	    });
 	})
 
-	app.factory('getStateNameFactory', function () {
-	    return {getStateName : function (name) {
+	app.factory('UtilFactory', function () {
+	    return {
+	        getStateName: function (name) {
 	        var stateRootName = name;
 	        var dotPos = stateRootName.indexOf(".");
 	        if (dotPos != -1) {
 	            stateRootName = stateRootName.substring(0, dotPos);
 	        }
 	        return stateRootName;
-	    }
+	        },
+	        displayElementByCssNone: function (element)
+	        {
+	            angular.element(element).css('display', 'none');
+	        },
+	        displayElementByCssBlock: function (element)
+	        {
+	            angular.element(element).css('display', 'block');
+	        }
+
 	  };
 	}
 	);
 
-	app.controller("mainController", ['$rootScope', '$scope', '$state', '$timeout', 'getStateNameFactory', function ($rootScope, $scope, $state, $timeout, getStateNameFactory) {
+	app.controller("mainController", ['$rootScope', '$scope', '$state', '$timeout', 'UtilFactory', function ($rootScope, $scope, $state, $timeout, UtilFactory) {
 
 	    $scope.isParentStateChanged = true;
 
@@ -80,7 +90,7 @@
 	        $scope.tabs.forEach(function (tab) {
 	            tab.active = $scope.active(tab.route);
 	        });
-	        var stateRootName = getStateNameFactory.getStateName($state.$current.name);
+	        var stateRootName = UtilFactory.getStateName($state.$current.name);
 
 	        $scope.tabs.forEach(function (tab) {
 	            tab.visible = !(tab.route.indexOf(stateRootName) == -1);
@@ -89,10 +99,14 @@
 
 	        if ($scope.isParentStateChanged)
 	        {
-	            angular.element('#content').css('display', 'none');
+	            UtilFactory.displayElementByCssNone('#tab-container');
+	            UtilFactory.displayElementByCssNone('#leftColumn');
+	            UtilFactory.displayElementByCssNone('#footer_wrap');
 	            $timeout(
                                     function () {
-                                        angular.element('#content').css('display', 'block');
+                                        UtilFactory.displayElementByCssBlock('#leftColumn');
+                                        UtilFactory.displayElementByCssBlock('#tab-container');
+                                        UtilFactory.displayElementByCssBlock('#footer_wrap');
                                     }, 10);
 	        }
 
@@ -123,9 +137,14 @@
                                 event.preventDefault();
                             }
                             else {
-                                if (!(getStateNameFactory.getStateName(fromState.name) == getStateNameFactory.getStateName(toState.name))) {
+                                if (!(UtilFactory.getStateName(fromState.name) == UtilFactory.getStateName(toState.name))) {
                                     if (fromState.name == '') {
-                                        angular.element('#content').css('display', 'none');
+                                        UtilFactory.displayElementByCssNone('#tab-container');
+                                        UtilFactory.displayElementByCssNone('#leftColumn');
+                                        UtilFactory.displayElementByCssNone('#footer_wrap');
+
+                                        //////angular.element('#content').css('display', 'none');
+
                                         //////$timeout(
                                         //////                    function () {
                                         //////                        angular.element('#content').css('display', 'block');
@@ -140,7 +159,7 @@
                                     $scope.isParentStateChanged = false;                                    
                                 }
                                 //          Не рано ли здесь делать невидимым класс #content?
-                                //////if (!(getStateNameFactory.getStateName(fromState.name) == getStateNameFactory.getStateName(toState.name)))
+                                //////if (!(UtilFactory.getStateName(fromState.name) == UtilFactory.getStateName(toState.name)))
                                 //////{
                                 //////    angular.element('#content').css('display', 'none');
                                 //////}
