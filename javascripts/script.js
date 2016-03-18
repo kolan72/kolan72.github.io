@@ -67,10 +67,6 @@
 
 	    $scope.go = function (route) {
 	        $state.go(route);
-	        //////$timeout(
-            //////    function () {
-            //////        angular.element('#content').css('display', 'block');
-            //////    }, 10);
 
 	    };
 
@@ -116,14 +112,6 @@
 	    }
         );
 
-	    $rootScope.$on('$viewContentLoaded',
-        function (event) {
-            //console.log(event);
-            // Access to all the view config properties.
-            // and one special property 'targetView'
-            // viewConfig.targetView 
-        }
-        );
 
 	    $rootScope.$on('$stateChangeError',
             function (event, toState, toParams, fromState, fromParams, error) {
@@ -142,13 +130,6 @@
                                         UtilFactory.displayElementByCssNone('#tab-container');
                                         UtilFactory.displayElementByCssNone('#leftColumn');
                                         UtilFactory.displayElementByCssNone('#footer_wrap');
-
-                                        //////angular.element('#content').css('display', 'none');
-
-                                        //////$timeout(
-                                        //////                    function () {
-                                        //////                        angular.element('#content').css('display', 'block');
-                                        //////                    }, 100);
                                     }
 
                                     $scope.isParentStateChanged = true;
@@ -158,11 +139,6 @@
 
                                     $scope.isParentStateChanged = false;                                    
                                 }
-                                //          Не рано ли здесь делать невидимым класс #content?
-                                //////if (!(UtilFactory.getStateName(fromState.name) == UtilFactory.getStateName(toState.name)))
-                                //////{
-                                //////    angular.element('#content').css('display', 'none');
-                                //////}
                             }
                         })
 	}]);
