@@ -53,6 +53,7 @@ table {
 Theme Styles
 *******************************************************************************/
 
+
 body {
   /*box-sizing: border-box;*/
   color:#373737;
@@ -395,6 +396,21 @@ Full-Width Styles
   right: 0;
   height: 70px;
   background: url('../images/icon_download.png') no-repeat 0% 90%;
+}
+
+.imageinp
+{
+    display: inline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.liin
+{
+     padding-left:15px;
 }
 
 .zip_download_link {
