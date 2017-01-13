@@ -5,7 +5,7 @@
 
 	app.config(function ($stateProvider, $urlRouterProvider, $provide) {
 
-	    $urlRouterProvider.otherwise("/main/tmfexplorer");
+	    $urlRouterProvider.otherwise("/main/wordsbrowser");
 	    $stateProvider
 			    .state("main", {
 			        abtract: true,
@@ -14,21 +14,19 @@
 
 
 			    })
-				.state("main.tab1", {
-				    url: "/tmfexplorer"
-
-				    
+				.state("main.tab2", {
+				    url: "/tmfexplorer"	    
 				    ,templateUrl: "tab1.html"
 
 				})
-				.state("main.tab2", { url: "/wordsbrowser", templateUrl: "tab2.html" })
+				.state("main.tab1", { url: "/wordsbrowser", templateUrl: "tab2.html" })
                 .state("screens", {
                     abtract: true, url: "/screens",
                     templateUrl: "main.html"
 
                 })
-                .state("screens.tab1", { url: "/tmfexplorer", templateUrl: "tab1screen.html" })
-                .state("screens.tab2", { url: "/wordsbrowser", templateUrl: "tab2screen.html" })
+                .state("screens.tab2", { url: "/tmfexplorer", templateUrl: "tab1screen.html" })
+                .state("screens.tab1", { url: "/wordsbrowser", templateUrl: "tab2screen.html" })
 	    ;
 
 	    $provide.decorator('$uiViewScroll', function ($delegate) {
@@ -75,11 +73,10 @@
 	    };
 
 	    $scope.tabs = [
-			{ heading: "TMFExplorer", route: "main.tab1", active: false, visible: true },
-			{ heading: "WordsBrowser", route: "main.tab2", active: false, visible: true },
-		    { heading: "TMFExplorer", route: "screens.tab1", active: false, visible: true },
-		    { heading: "WordsBrowser", route: "screens.tab2", active: false, visible: true }
-
+            { heading: "WordsBrowser", route: "main.tab1", active: false, visible: true },
+			{ heading: "TMFExplorer", route: "main.tab2", active: false, visible: true },
+            { heading: "WordsBrowser", route: "screens.tab1", active: false, visible: true },
+		    { heading: "TMFExplorer", route: "screens.tab2", active: false, visible: true }
 	    ];
 
 	    $scope.$on("$stateChangeSuccess", function () {
