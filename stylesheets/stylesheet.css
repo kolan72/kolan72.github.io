@@ -44,6 +44,11 @@ html, body {
 /* -AK */
 /*ol, ul {list-style: none;} */
 
+header
+{
+    height:65px;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -124,6 +129,39 @@ a {
   -ms-transition: color 0.5s ease;
   -ms-transition: text-shadow 0.5s ease;
 }
+
+a.main-logo {
+	font-family: Arial,Helvetica,sans-serif;
+    /*display: block;
+    margin: 0 auto;
+    text-align: center;*/
+	display: inline-block;
+	float: left;
+    border:0 none !important;
+    background: transparent !important;
+    outline: none;
+    border-style: none;
+    
+}
+
+.noborder {
+    border: none !important;
+    border-style: none;
+    background: transparent !important;
+    margin-top:5px;
+    margin-left:5px;
+    height:55px;
+    width:55px;
+    box-shadow:none;
+}
+
+/*.tagline {
+    float: right;
+    text-align: right;
+    font-style: italic;
+    ?width: 100px;
+    margin: 58px 12px 12px;
+}*/
 
 a:hover, a:focus {text-decoration: underline;}
 
@@ -298,6 +336,7 @@ Full-Width Styles
   border-bottom-right-radius: 2px;
 }
 
+
 #HotLog {
   display:    block;
   position:  relative;
@@ -364,6 +403,22 @@ Full-Width Styles
   float:left;
 }
 
+#project_title3
+{
+   margin-left:25px;
+   margin-top:10px;
+   float:left;
+}
+
+#project_title4
+{
+   margin-top:10px;
+   margin-right:15px;
+   text-align : right;  
+   font-size: 42px;
+   font-style:italic;
+   float:right;
+}
 
 #project_title2 {
   margin: 0;
@@ -407,6 +462,7 @@ Full-Width Styles
     font: inherit;
     vertical-align: baseline;
 }
+
 
 .liin
 {
