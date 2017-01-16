@@ -5,7 +5,7 @@
 
 	app.config(function ($stateProvider, $urlRouterProvider, $provide) {
 
-	    $urlRouterProvider.otherwise("/main/wordsbrowser");
+	    $urlRouterProvider.otherwise("/main/home");
 	    $stateProvider
 			    .state("main", {
 			        abtract: true,
@@ -14,12 +14,17 @@
 
 
 			    })
-				.state("main.tab2", {
+                .state("main.tab1", {
+                    url: "/home"
+				    , templateUrl: "tab0.html"
+
+                })
+				.state("main.tab3", {
 				    url: "/tmfexplorer"	    
 				    ,templateUrl: "tab1.html"
 
 				})
-				.state("main.tab1", { url: "/wordsbrowser", templateUrl: "tab2.html" })
+				.state("main.tab2", { url: "/wordsbrowser", templateUrl: "tab2.html" })
                 .state("screens", {
                     abtract: true, url: "/screens",
                     templateUrl: "main.html"
@@ -73,8 +78,9 @@
 	    };
 
 	    $scope.tabs = [
-            { heading: "WordsBrowser", route: "main.tab1", active: false, visible: true },
-			{ heading: "TMFExplorer", route: "main.tab2", active: false, visible: true },
+            { heading: "Главная", route: "main.tab1", active: false, visible: true },
+            { heading: "WordsBrowser", route: "main.tab2", active: false, visible: true },
+			{ heading: "TMFExplorer", route: "main.tab3", active: false, visible: true },
             { heading: "WordsBrowser", route: "screens.tab1", active: false, visible: true },
 		    { heading: "TMFExplorer", route: "screens.tab2", active: false, visible: true }
 	    ];
