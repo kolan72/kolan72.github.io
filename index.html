@@ -21,9 +21,9 @@
     <script src="javascripts/script.js"></script>
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
- 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <title>TMFExplorer - программа для работы со слишком большим количеством файлов</title>
+    <title>WordsBrowser, TMFExplorer - для изучения английского языка и работы со слишком большим количеством файлов</title>
   </head>
 
  <body  ng-app="routedTabs" ng-controller="mainController" >
@@ -47,8 +47,10 @@
     <div id="leftColumn" class= "navbar-custom" > 
         <ul>
           <li><a ui-sref="main.tab1">Главная</a></li>
-          <li><a href="https://github.com/kolan72/WordsBrowser/archive/2.0.0.0.zip">Скачать WordsBrowser</a></li>
-          <li><a href="https://github.com/kolan72/SetupTMF/archive/1.1.0.0.zip">Скачать TMFExplorer</a></li>
+          <li><a ui-sref="main.tab2">WordsBrowser</a></li>
+         <!-- <li><a href="https://github.com/kolan72/WordsBrowser/archive/2.0.0.0.zip">Скачать WordsBrowser</a></li>-->
+          <li><a ui-sref="main.tab3">TMFExplorer</a></li>
+          <!--<li><a href="https://github.com/kolan72/SetupTMF/archive/1.1.0.0.zip">Скачать TMFExplorer</a></li>-->
           <li><a ui-sref="screens.tab1">Скриншоты</a></li>
         </ul> 
     </div>
