@@ -517,7 +517,7 @@ Full-Width Styles
 
 #leftColumn {
     background: #f2f2f2;
-    width: 182px; /*162px*/
+    width: 182px; /*182px 162px*/
     float: left;
     border: 1px solid rgb(0, 106, 187);
     border-radius: 4px;
@@ -635,7 +635,7 @@ footer
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 162px;
+    width: 162px;/* 162 */
     background-color: #f1f1f1;
 }
 
@@ -645,6 +645,8 @@ footer
     padding: 4px 0 8px 8px;
     text-decoration: none;
     font-style: italic;
+    font-size: 18px;
+    font-weight:bold;
 }
 
 /* Change the link color on hover */
