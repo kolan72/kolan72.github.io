@@ -718,6 +718,8 @@ footer
     color: #FFFFFF;
 }
 
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
 .nav li a:hover{
 	background-color: #007EDF;
 	color: #FFF;
