@@ -40,6 +40,7 @@
                })
                
                .state("history.tab1", { url: "/wordsbrowser", templateUrl: "tab1history.html" })
+               .state("history.tab2", { url: "/tmfexplorer", templateUrl: "tab2history.html" })
 
 	    ;
 
@@ -93,6 +94,7 @@
             { heading: "WordsBrowser", route: "screens.tab1", active: false, visible: true },
 		    { heading: "TMFExplorer", route: "screens.tab2", active: false, visible: true },
 		    { heading: "WordsBrowser", route: "history.tab1", active: false, visible: true },
+            { heading: "TMFExplorer", route: "history.tab2", active: false, visible: true },
 	    ];
 
 	    $scope.$on("$stateChangeSuccess", function () {
