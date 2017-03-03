@@ -469,6 +469,20 @@ Full-Width Styles
      padding-left:15px;
 }
 
+.licontent
+{
+     padding-left:15px;
+     font-family: sans-serif;
+     font-size: 85%;
+}
+
+.licontent2
+{
+     padding-left:30px;
+     font-family: sans-serif;
+     font-size: 85%;
+}
+
 .zip_download_link {
   display: block;
   float: right;
