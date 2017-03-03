@@ -483,6 +483,13 @@ Full-Width Styles
      font-size: 85%;
 }
 
+.licontent3
+{
+     padding-left:45px;
+     font-family: sans-serif;
+     font-size: 85%;
+}
+
 .zip_download_link {
   display: block;
   float: right;
