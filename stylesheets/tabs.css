@@ -126,7 +126,7 @@ q:before, q:after {
 
 }
 
-.tab-content h5
+.tab-content h5, h6
 {
      line-height: 15px;
      margin-top: 12px;
