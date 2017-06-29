@@ -24,6 +24,8 @@
 
 				})
 				.state("main.tab2", { url: "/wordsbrowser", templateUrl: "tab2.html" })
+                .state("main.tab4", { url: "/planefiledistributor", templateUrl: "tab4.html" })
+                
 
                 .state("screens", {
                     abtract: true,
@@ -90,7 +92,8 @@
 	    $scope.tabs = [
             { heading: "Главная", route: "main.tab1", active: false, visible: true },
             { heading: "WordsBrowser", route: "main.tab2", active: false, visible: true },
-			{ heading: "TMFExplorer", route: "main.tab3", active: false, visible: true },
+            { heading: "TMFExplorer", route: "main.tab3", active: false, visible: true },
+            { heading: "PlaneFileDistributor", route: "main.tab4", active: false, visible: true },
             { heading: "WordsBrowser", route: "screens.tab1", active: false, visible: true },
 		    { heading: "TMFExplorer", route: "screens.tab2", active: false, visible: true },
 		    { heading: "WordsBrowser", route: "history.tab1", active: false, visible: true },
