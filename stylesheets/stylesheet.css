@@ -567,7 +567,7 @@ Full-Width Styles
 
 }
 /*+AK аналогично с #main_content_wrap-tab  по цвету*/
-#wordsbrowser-tab
+#wordsbrowser-tab, #planefiledistributor-tab
 {
     background: #f2f2f2;
 }
@@ -614,7 +614,7 @@ footer
 {
      padding-top: 20px;
 }
-#h5_toponly
+#h5_toponly, #h5_toponly2
 {
     margin-top: 40px;
 }
