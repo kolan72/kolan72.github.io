@@ -32,8 +32,9 @@
                     url: "/screens",
                     templateUrl: "main.html"
                 })
-                .state("screens.tab2", { url: "/tmfexplorer", templateUrl: "tab1screen.html" })
+                .state("screens.tab2", { url: "/tmfexplorer",  templateUrl: "tab1screen.html" })
                 .state("screens.tab1", { url: "/wordsbrowser", templateUrl: "tab2screen.html" })
+	            .state("screens.tab4", { url: "/planefiledistributor", templateUrl: "tab4screen.html" })
                 
                .state("history", {
                  abtract: true,
@@ -96,6 +97,7 @@
             { heading: "PlaneFileDistributor", route: "main.tab4", active: false, visible: true },
             { heading: "WordsBrowser", route: "screens.tab1", active: false, visible: true },
 		    { heading: "TMFExplorer", route: "screens.tab2", active: false, visible: true },
+            { heading: "PlaneFileDistributor", route: "screens.tab4", active: false, visible: true },
 		    { heading: "WordsBrowser", route: "history.tab1", active: false, visible: true },
             { heading: "TMFExplorer", route: "history.tab2", active: false, visible: true },
 	    ];
