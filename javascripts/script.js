@@ -44,6 +44,7 @@
                
                .state("history.tab1", { url: "/wordsbrowser", templateUrl: "tab1history.html" })
                .state("history.tab2", { url: "/tmfexplorer", templateUrl: "tab2history.html" })
+               .state("history.tab4", { url: "/planefiledistributor", templateUrl: "tab4history.html" })
 
 	    ;
 
@@ -100,6 +101,7 @@
             { heading: "PlaneFileDistributor", route: "screens.tab4", active: false, visible: true },
 		    { heading: "WordsBrowser", route: "history.tab1", active: false, visible: true },
             { heading: "TMFExplorer", route: "history.tab2", active: false, visible: true },
+            { heading: "PlaneFileDistributor", route: "history.tab4", active: false, visible: true },
 	    ];
 
 	    $scope.$on("$stateChangeSuccess", function () {
