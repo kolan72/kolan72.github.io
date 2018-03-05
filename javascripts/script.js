@@ -48,7 +48,7 @@
 
 	    ;
 
-	    $locationProvider.html5Mode(true);
+	    $locationProvider.hashPrefix('');
 
 	    $provide.decorator('$uiViewScroll', function ($delegate) {
 	        return function (uiViewElement) {
