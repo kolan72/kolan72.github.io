@@ -95,7 +95,6 @@
 
 	    $scope.go = function (route) {
 	        $state.go(route);
-
 	    };
 
 	    $scope.active = function (route) {
@@ -117,7 +116,7 @@
 
 	    $scope.$on("$stateChangeSuccess", function () {
 
-	        if ($scope.isParentStateChanged) {
+	        if ($scope.isParentStateChanged && !$scope.isChildStateChanged) {
 	            UtilFactory.displayClassElementByCssBlock('.spinner');
 	            UtilFactory.displayElementByCssNone('#tab-container');
 	            UtilFactory.displayElementByCssNone('#leftColumn');
@@ -137,9 +136,9 @@
 	        });
 	        var stateRootName = UtilFactory.getStateName($state.$current.name);
 
-	        $scope.tabs.forEach(function (tab) {
-	            tab.visible = !(tab.route.indexOf(stateRootName) == -1);
 
+	        $scope.tabs.forEach(function (tab) {
+	           tab.visible = !(tab.route.indexOf(stateRootName) == -1);
 	        });
 
 	    });
@@ -153,7 +152,7 @@
             function (event, toState, toParams, fromState, fromParams, error) {
                 console.log(toState.url);
             }
-    );
+        );
 
 	    $rootScope.$on('$stateChangeStart',
                         function (event, toState, toParams, fromState, fromParams, options) {
@@ -173,8 +172,7 @@
                                 }
                                 else
                                 {
-
-                                    $scope.isParentStateChanged = false;                                    
+                                    $scope.isParentStateChanged = false;
                                 }
                             }
                         })
