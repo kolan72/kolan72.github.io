@@ -72,6 +72,15 @@
 	        displayElementByCssBlock: function (element)
 	        {
 	            angular.element(element).css('display', 'block');
+	        },
+
+	        displayClassElementByCssNone: function (className)
+	        {
+	            angular.element(document.querySelector(className)).css('display', 'none');
+	        },
+	        displayClassElementByCssBlock: function (className)
+	        {
+	            angular.element(document.querySelector(className)).css('display', 'block');
 	        }
 
 	  };
@@ -117,11 +126,15 @@
 
 	        if ($scope.isParentStateChanged)
 	        {
+	            UtilFactory.displayClassElementByCssBlock('.spinner');
+
 	            UtilFactory.displayElementByCssNone('#tab-container');
 	            UtilFactory.displayElementByCssNone('#leftColumn');
 	            UtilFactory.displayElementByCssNone('#footer_wrap');
 	            $timeout(
                                     function () {
+                                        UtilFactory.displayClassElementByCssNone('.spinner');
+
                                         UtilFactory.displayElementByCssBlock('#leftColumn');
                                         UtilFactory.displayElementByCssBlock('#tab-container');
                                         UtilFactory.displayElementByCssBlock('#footer_wrap');
@@ -149,6 +162,7 @@
                             else {
                                 if (!(UtilFactory.getStateName(fromState.name) == UtilFactory.getStateName(toState.name))) {
                                     if (fromState.name == '') {
+                                        UtilFactory.displayClassElementByCssBlock('.spinner');
                                         UtilFactory.displayElementByCssNone('#tab-container');
                                         UtilFactory.displayElementByCssNone('#leftColumn');
                                         UtilFactory.displayElementByCssNone('#footer_wrap');
