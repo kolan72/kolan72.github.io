@@ -114,20 +114,9 @@
 	    ];
 
 	    $scope.$on("$stateChangeSuccess", function () {
-	        $scope.tabs.forEach(function (tab) {
-	            tab.active = $scope.active(tab.route);
-	        });
-	        var stateRootName = UtilFactory.getStateName($state.$current.name);
 
-	        $scope.tabs.forEach(function (tab) {
-	            tab.visible = !(tab.route.indexOf(stateRootName) == -1);
-
-	        });
-
-	        if ($scope.isParentStateChanged)
-	        {
+	        if ($scope.isParentStateChanged) {
 	            UtilFactory.displayClassElementByCssBlock('.spinner');
-
 	            UtilFactory.displayElementByCssNone('#tab-container');
 	            UtilFactory.displayElementByCssNone('#leftColumn');
 	            UtilFactory.displayElementByCssNone('#footer_wrap');
@@ -138,8 +127,18 @@
                                         UtilFactory.displayElementByCssBlock('#leftColumn');
                                         UtilFactory.displayElementByCssBlock('#tab-container');
                                         UtilFactory.displayElementByCssBlock('#footer_wrap');
-                                    }, 10);
+                                    }, 1000);
 	        }
+
+	        $scope.tabs.forEach(function (tab) {
+	            tab.active = $scope.active(tab.route);
+	        });
+	        var stateRootName = UtilFactory.getStateName($state.$current.name);
+
+	        $scope.tabs.forEach(function (tab) {
+	            tab.visible = !(tab.route.indexOf(stateRootName) == -1);
+
+	        });
 
 	    });
 	    $rootScope.$on('$stateNotFound', function (event, unfoundState, fromState, fromParams) {
