@@ -3,7 +3,7 @@
 	var app = angular.module("routedTabs", ["ui.router", "ui.bootstrap"]);
 
 
-	app.config(function ($stateProvider, $urlRouterProvider, $provide) {
+	app.config(function ($stateProvider, $urlRouterProvider, $provide, $locationProvider) {
 
 	    $urlRouterProvider.otherwise("/main/home");
 	    $stateProvider
@@ -47,6 +47,8 @@
                .state("history.tab4", { url: "/planefiledistributor", templateUrl: "tab4history.html" })
 
 	    ;
+
+	    $locationProvider.html5Mode(true);
 
 	    $provide.decorator('$uiViewScroll', function ($delegate) {
 	        return function (uiViewElement) {
