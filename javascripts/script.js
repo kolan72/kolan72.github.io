@@ -92,6 +92,9 @@
 	app.controller("mainController", ['$rootScope', '$scope', '$state', '$timeout', 'UtilFactory', function ($rootScope, $scope, $state, $timeout, UtilFactory) {
 
 	    $scope.isParentStateChanged = true;
+	    $scope.IsLoading = false;
+
+	    var myMap = new Map();
 
 	    $scope.go = function (route) {
 	        $state.go(route);
@@ -114,9 +117,13 @@
             { heading: "PlaneFileDistributor", route: "history.tab4", active: false, visible: true },
 	    ];
 
+	    $scope.tabs.forEach(function (tab) {
+	        myMap.set(tab.route, 0);
+	    });
+
 	    $scope.$on("$stateChangeSuccess", function () {
 
-	        if ($scope.isParentStateChanged && !$scope.isChildStateChanged) {
+	        if ($scope.isParentStateChanged) {
 	            UtilFactory.displayClassElementByCssBlock('.spinner');
 	            UtilFactory.displayElementByCssNone('#tab-container');
 	            UtilFactory.displayElementByCssNone('#leftColumn');
@@ -141,12 +148,21 @@
 	           tab.visible = !(tab.route.indexOf(stateRootName) == -1);
 	        });
 
+	        ////console.log($state.$current.name);
+
+	        if ($scope.IsLoading) {
+	            myMap.set($state.$current.name, 1);
+	            $timeout(function () {
+	                $scope.IsLoading = false;
+	            }, 1000);
+
+	        }
+
 	    });
 	    $rootScope.$on('$stateNotFound', function (event, unfoundState, fromState, fromParams) {
 	        console.log(unfoundState.to);
 	    }
         );
-
 
 	    $rootScope.$on('$stateChangeError',
             function (event, toState, toParams, fromState, fromParams, error) {
@@ -168,10 +184,19 @@
                                         UtilFactory.displayElementByCssNone('#footer_wrap');
                                     }
 
+                                    console.log(toState.name);
+                                    myMap.set(toState.name, 1);
                                     $scope.isParentStateChanged = true;
                                 }
                                 else
                                 {
+                                    ////console.log(toState.name);
+                                    if (myMap.get(toState.name) == 0) {
+                                        $scope.IsLoading = true;
+                                    }
+                                    else {
+                                        $scope.IsLoading = false;
+                                    }
                                     $scope.isParentStateChanged = false;
                                 }
                             }
