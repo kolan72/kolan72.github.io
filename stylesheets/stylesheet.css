@@ -155,6 +155,39 @@ a.main-logo {
     box-shadow:none;
 }
 
+.nobordermin {
+    border: none !important;
+    border-style: none;
+    background: transparent !important;
+    margin-top:12px;
+    margin-left:5px;
+    height:45px;
+    width:45px;
+    box-shadow:none;
+}
+
+.nobordermiddle {
+    border: none !important;
+    border-style: none;
+    background: transparent !important;
+    margin-top:10px;
+    margin-left:5px;
+    height:48px;
+    width:48px;
+    box-shadow:none;
+}
+
+.nobordermin_tree {
+    border: none !important;
+    border-style: none;
+    background: transparent !important;
+    margin-top:12px;
+    margin-left:5px;
+    height:40px;
+    width:40px;
+    box-shadow:none;
+}
+
 /*.tagline {
     float: right;
     text-align: right;
