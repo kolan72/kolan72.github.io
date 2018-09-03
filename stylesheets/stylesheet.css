@@ -173,7 +173,7 @@ a.main-logo {
     margin-top:10px;
     margin-left:5px;
     height:48px;
-    width:48px;
+    width:45px;
     box-shadow:none;
 }
 
@@ -185,6 +185,28 @@ a.main-logo {
     margin-left:5px;
     height:40px;
     width:40px;
+    box-shadow:none;
+}
+
+.nobordermin_tree2 {
+    border: none !important;
+    border-style: none;
+    background: transparent !important;
+    margin-top:15px;
+    margin-left:5px;
+    height:35px;
+    width:35px;
+    box-shadow:none;
+}
+
+.nobordermin_tree3 {
+    border: none !important;
+    border-style: none;
+    background: transparent !important;
+    margin-top:18px;
+    margin-left:5px;
+    height:30px;
+    width:30px;
     box-shadow:none;
 }
 
