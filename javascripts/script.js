@@ -48,6 +48,7 @@
                .state("history.tab1", { url: "/wordsbrowser", templateUrl: "tab1history.html" })
                .state("history.tab2", { url: "/tmfexplorer", templateUrl: "tab2history.html" })
                .state("history.tab4", { url: "/planefiledistributor", templateUrl: "tab4history.html" })
+               .state("history.tab5", { url: "/projecttasktree", templateUrl: "tab5history.html" })
 
 	    ;
 
@@ -124,6 +125,8 @@
 		    { heading: "WordsBrowser", route: "history.tab1", active: false, visible: true },
             { heading: "TMFExplorer", route: "history.tab2", active: false, visible: true },
             { heading: "PlaneFileDistributor", route: "history.tab4", active: false, visible: true },
+
+            { heading: "ProjectTaskTree", route: "history.tab5", active: false, visible: true }
 	    ];
 
 	    $scope.tabs.forEach(function (tab) {
@@ -144,7 +147,7 @@
                                         UtilFactory.displayElementByCssBlock('#leftColumn');
                                         UtilFactory.displayElementByCssBlock('#tab-container');
                                         UtilFactory.displayElementByCssBlock('#footer_wrap');
-                                    }, 1000);
+                                    }, 200);
 	        }
 
 	        $scope.tabs.forEach(function (tab) {
@@ -157,13 +160,11 @@
 	           tab.visible = !(tab.route.indexOf(stateRootName) == -1);
 	        });
 
-	        ////console.log($state.$current.name);
-
 	        if ($scope.IsLoading) {
 	            myMap.set($state.$current.name, 1);
 	            $timeout(function () {
 	                $scope.IsLoading = false;
-	            }, 1000);
+	            }, 100);
 
 	        }
 
